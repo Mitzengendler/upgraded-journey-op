@@ -52,13 +52,53 @@ void print_io(int* pn, string* matrix)
     }
 }
 
-string** pretty_str(int* pn, string* arr)
+void pretty_str(int* pn, string* arr, string** prettyTable)
 {
-    int leng;
-    for (int i = 0; i < *pn; i++) {
-        cout << "Символов в строке " << i + 1 << ": ";
-        leng = arr[i].length();
-        cout << leng << endl;
+    for (int ll = 0; ll < *pn; ll++) {
+        arr[ll] += ',';
     }
-    return 0;
+    for (int i = 0; i < *pn; i++) {
+        int iter = 0;
+        string ll;
+        for (int j = 0; j < arr[i].length(); j++) {
+            if (arr[i][j] == ',') {
+                prettyTable[i][iter] = ll;
+                iter++;
+                ll.clear();
+                continue;
+            }
+            else {
+                ll = ll + arr[i][j];
+            }
+        }
+    }
+    for (int i = 0; i < *pn; i++) {
+        for (int j = 0; j < *pn; j++) {
+            cout << setw(4) << prettyTable[i][j];
+        }
+        cout << endl;
+    }
+}
+
+string** two_d_scoreTable_init(int* pn) {
+    string** arr = new string * [*pn];
+    for (int i = 0; i < *pn; i++) {
+        arr[i] = new string[*pn - 1];
+    }
+    return arr;
+}
+
+void table(int* pn, string* commandName, string** scoreTable, string** rawArray)
+{
+    for (int i = 0; i < *pn; i++) {
+        commandName[i] = rawArray[i][0];
+    }
+    for (int i = 0; i < *pn; i++) {
+        for (int j = 1; j < *pn; j++) {
+            scoreTable[i][j] = rawArray[i][j];
+        }
+    }
+    for (int i = 0; i < *pn; i++) {
+        cout << commandName[i] << endl;
+    }
 }
