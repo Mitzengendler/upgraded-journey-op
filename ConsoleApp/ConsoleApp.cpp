@@ -12,7 +12,7 @@ int main()
     int* pn = &n;
     string name;
     getline(cin, name); //pp.csv - НАЗВАНИЕ ВХОДНОГО ФАЙЛА
-    string** io = read_io(pn, name);
+    string* io = read_io(pn, name);
     print_io(pn, io);
-    delete[] io;
+    string** fin = pretty_str(pn, io);
 }
