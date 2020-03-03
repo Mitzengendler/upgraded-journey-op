@@ -13,3 +13,5 @@ string** two_d_scoreTable_init(int* pn);
 void print_io(int* pn, string* matrix);
 void pretty_str(int* pn, string* arr, string** prettyTable);
 void table(int* pn, string* commandName, string** scoreTable, string** rawArray);
+void print_commandName(int* pn, string* commandName);
+void print_scoreTable(int* pn, string** scoreTable);

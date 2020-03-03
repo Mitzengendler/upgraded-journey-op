@@ -94,11 +94,25 @@ void table(int* pn, string* commandName, string** scoreTable, string** rawArray)
         commandName[i] = rawArray[i][0];
     }
     for (int i = 0; i < *pn; i++) {
-        for (int j = 1; j < *pn; j++) {
-            scoreTable[i][j] = rawArray[i][j];
+        for (int j = 0; j < *pn - 1; j++) {
+            scoreTable[i][j] = rawArray[i][j + 1];
         }
     }
+}
+
+void print_commandName(int* pn, string* commandName)
+{
     for (int i = 0; i < *pn; i++) {
         cout << commandName[i] << endl;
+    }
+}
+
+void print_scoreTable(int* pn, string** scoreTable)
+{
+    for (int i = 0; i < *pn; i++) {
+        for (int j = 0; j < *pn - 1; j++) {
+            cout << scoreTable[i][j] << " ";
+        }
+        cout << endl;
     }
 }

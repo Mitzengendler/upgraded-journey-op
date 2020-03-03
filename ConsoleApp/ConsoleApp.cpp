@@ -13,11 +13,14 @@ int main()
     string name;
     getline(cin, name); //pp.csv - НАЗВАНИЕ ВХОДНОГО ФАЙЛА
     string* io = read_io(pn, name);
-    print_io(pn, io);
     cout << endl;
     string** prettyTable = two_d_io(pn);
     pretty_str(pn, io, prettyTable);
-    string* commandName = one_d_io(pn);
-    string** scoreTable = two_d_scoreTable_init(pn);
-    //table(pn, commandName, scoreTable, prettyTable);
+    cout << endl;
+    string* commandName = one_d_io(pn); //Здесь 11 команд
+    string** scoreTable = two_d_scoreTable_init(pn); //Здесь счёт
+    table(pn, commandName, scoreTable, prettyTable);
+    print_commandName(pn, commandName);
+    cout << endl;
+    print_scoreTable(pn, scoreTable);
 }
