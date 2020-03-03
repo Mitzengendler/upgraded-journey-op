@@ -13,7 +13,9 @@ string* read_io(int* pn, string name)
         cout << "Файл открыт." << endl;
         string temp;
         int n;
-        file >> n;
+        getline(file, temp);
+        n = stoi(temp);
+        //file >> n;
         cout << "Количество команд: " << n << endl;
         *pn = n;
 
@@ -52,5 +54,11 @@ void print_io(int* pn, string* matrix)
 
 string** pretty_str(int* pn, string* arr)
 {
+    int leng;
+    for (int i = 0; i < *pn; i++) {
+        cout << "Символов в строке " << i + 1 << ": ";
+        leng = arr[i].length();
+        cout << leng << endl;
+    }
     return 0;
 }
