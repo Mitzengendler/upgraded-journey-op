@@ -36,4 +36,21 @@ int main()
     }
     print(pn, arr1);
     print(pm, arr2);
+
+    int z = n + m;
+    int* pz = &z;
+    string* allTeams = one_d_arr(pz);
+
+    int iter = 0;
+    for (int i = 0; i < *pz; i++) {
+        if (i < *pn) {
+            allTeams[i] = arr1[i];
+        }
+        else {
+            allTeams[i] = arr2[iter];
+            iter++;
+        }
+    }
+
+    print(pz, allTeams);
 }
