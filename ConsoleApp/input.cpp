@@ -38,3 +38,33 @@ void print(int* pn, string* arr)
     }
     cout << endl;
 }
+
+string** two_d_eleven(int* pn)
+{
+    string** arr = new string * [*pn];
+    for (int i = 0; i < *pn; i++) {
+        arr[i] = new string[11];
+    }
+    return arr;
+}
+
+void pretty(int* pn, string* arr, string** prettyTable) {
+    for (int ll = 0; ll < *pn; ll++) {
+        arr[ll] += ',';
+    }
+    for (int i = 0; i < *pn; i++) {
+        int iter = 0;
+        string ll;
+        for (int j = 0; j < arr[i].length(); j++) {
+            if (arr[i][j] == ',') {
+                prettyTable[i][iter] = ll;
+                iter++;
+                ll.clear();
+                continue;
+            }
+            else {
+                ll = ll + arr[i][j];
+            }
+        }
+    }
+}

@@ -53,4 +53,14 @@ int main()
     }
 
     print(pz, allTeams);
+
+    string** prettyTable = two_d_eleven(pz);
+    pretty(pz, allTeams, prettyTable);
+    cout << endl;
+    for (int i = 0; i < *pz; i++) {
+        for (int j = 0; j < 11; j++) {
+            cout << setw(4) << prettyTable[i][j];
+        }
+        cout << endl;
+    }
 }
