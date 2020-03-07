@@ -61,11 +61,22 @@ int main()
         }
         cout << endl;
     }
-    ///////////////////////////////////////////////////////
+	
 	string* tm = teams(pz, prettyTable);
     output(pz, tm);
 	string** sc = score(pz, prettyTable);
     showscore(pz, sc);
     int** res = init2d(pz);
     calcres(pz, sc, res);
+	int *sumsc = init1d(pz);
+    summ(pz, res, sumsc);
+    for (int j = 0; j < 20; j++) {
+        cout << sumsc[j] << " ";
+    }
+    sort(pz, tm, sumsc);
+    cout << endl;
+    cout << endl;
+    for (int j = 0; j < 20; j++) {
+        cout << sumsc[j] << " ";
+    }
 }

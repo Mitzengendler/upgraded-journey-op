@@ -68,7 +68,7 @@ void pretty(int* pn, string* arr, string** prettyTable) {
         }
     }
 }
-////////////////////////////////////////////////////////
+
 string* teams(int* pn, string** prettyTable){
     string* tm = one_d_arr(pn);
     for(int i = 0; i < *pn; i++ ){
@@ -110,6 +110,12 @@ void showscore(int* pn, string** sc)
     }
 }
 
+int* init1d(int* pn)
+{
+    int* arr = new int [*pn];
+    return arr;
+}
+
 int** init2d(int* pn)
 {
     int** arr = new int * [*pn];
@@ -148,4 +154,35 @@ void calcres(int* pn, string** in, int** out)
             }
         }
 	}
+}
+void summ(int* pn, int** in, int* out)
+{
+    for (int i = 0; i < *pn; i++) {
+        int sum = 0;
+        for (int j = 0; j < 10; j++) {
+            sum += in[i][j];
+        }
+        out[i] = sum;
+    }
+}
+
+void sort(int* pn, string* team, int* score)
+{
+    for (int i = 0; i < *pn - 1; i++)
+    {
+        for (int j = i + 1; j < *pn; j++)
+        {
+            if (score[i] < score[j])
+            {
+                int temp;
+                string t;
+                temp = score[i];
+                score[i] = score[j];
+                score[j] = temp;
+                t = team[i];
+                team[i] = team[j];
+                team[j] = t;
+            }
+        }
+    }
 }
