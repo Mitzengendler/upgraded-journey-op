@@ -16,3 +16,5 @@ void pretty(int* pn, string* arr, string** prettyTable);
 ////////////////////////////////////////////////////
 string* teams(int* pn, string** prettyTable);
 void output(int* pn, string* tm);
+string** score(int* pn, string** prettyTable);
+void showscore(int* pn, string** sc);

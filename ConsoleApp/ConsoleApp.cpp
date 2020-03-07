@@ -66,5 +66,7 @@ int main()
     ///////////////////////////////////////////////////////
 	string* tm = teams(pz, prettyTable);
     output(pz, tm);
+	string** sc = score(pz, prettyTable);
+    showscore(pz, sc);
     
 }

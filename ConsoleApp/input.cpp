@@ -86,3 +86,26 @@ for(int i = 0; i < *pn; i++ ){
         }
     }
 }
+
+string** score(int* pn, string** prettyTable)
+{
+    string** sc = two_d_out(pn);
+    for (int i = 0; i < *pn; i++) {
+        int itr = 0;
+        for (int j = 1; j < 11; j++) {
+            sc[i][itr] = prettyTable[i][j];
+            itr++;
+        }
+    }
+    return sc;
+}
+
+void showscore(int* pn, string** sc)
+{
+    for (int i = 0; i < *pn; i++) {
+        for (int j = 0; j < 10; j++) {
+            cout << setw(3) << sc[i][j] << ' ';
+        }
+        cout << endl;
+    }
+}
