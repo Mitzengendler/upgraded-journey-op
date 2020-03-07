@@ -18,3 +18,5 @@ string* teams(int* pn, string** prettyTable);
 void output(int* pn, string* tm);
 string** score(int* pn, string** prettyTable);
 void showscore(int* pn, string** sc);
+int** init2d(int* pn);
+void calcres(int* pn, string** in, int** out);

@@ -52,8 +52,6 @@ int main()
         }
     }
 
-    print(pz, allTeams);
-
     string** prettyTable = two_d_eleven(pz);
     pretty(pz, allTeams, prettyTable);
     cout << endl;
@@ -68,5 +66,6 @@ int main()
     output(pz, tm);
 	string** sc = score(pz, prettyTable);
     showscore(pz, sc);
-    
+    int** res = init2d(pz);
+    calcres(pz, sc, res);
 }

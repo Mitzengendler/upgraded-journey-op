@@ -109,3 +109,43 @@ void showscore(int* pn, string** sc)
         cout << endl;
     }
 }
+
+int** init2d(int* pn)
+{
+    int** arr = new int * [*pn];
+    for (int i = 0; i < *pn; i++) {
+        arr[i] = new int[10];
+    }
+    return arr;
+}
+
+void calcres(int* pn, string** in, int** out)
+{
+    for (int i = 0; i < *pn; i++) {
+        int n1 = 0, n2 = 0;
+        for (int j = 0; j < 10; j++) {
+            for (int h = 0; h < 3; h++) {
+                if (h == 1) {
+                    continue;
+                }
+                char t = in[i][j][h];
+                string l(1, t);
+                if(h == 0){
+                    n1 = stoi(l);
+                }
+                if (h == 2) {
+                    n2 = stoi(l);
+                }
+            }
+            if (n1 > n2) {
+                out[i][j] = 3;
+            }
+            if (n1 == n2) {
+                out[i][j] = 1;
+            }
+            if (n1 < n2) {
+                out[i][j] = 0;
+            }
+        }
+	}
+}
