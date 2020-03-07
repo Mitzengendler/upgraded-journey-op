@@ -203,3 +203,28 @@ void fillfinal(int* pn, string* team, int* score, string** out)
         out[i][1] = to_string(score[i]);
     }
 }
+
+void putInFile(int* pn, string** matrix, string name) {
+    ofstream outfile(name);
+    ofstream file;
+    file.open(name);
+    if (file.is_open() == 0) {
+        cout << "Error opening file!";
+        exit(0);
+    }
+    if (file.is_open())
+    {
+        for (int i = 0; i < *pn; i++) {
+            for (int j = 0; j < 2; j++) {
+                if (j == 0) {
+                    file << matrix[i][j] << ",";
+                }
+                if (j == 1) {
+                    file  << matrix[i][j];
+                }
+            }
+            file << "\n";
+        }
+        file.close();
+    }
+}

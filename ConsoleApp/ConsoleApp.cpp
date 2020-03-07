@@ -81,4 +81,9 @@ int main()
     }
 	string** final = initfinal(pz);
     fillfinal(pz, tm, sumsc, final);
+	string name;
+    cout << endl;
+    cout << "Enter name of result file: ";
+    getline(cin, name);
+    putInFile(pz, final, name);
 }
