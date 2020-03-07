@@ -87,6 +87,15 @@ for(int i = 0; i < *pn; i++ ){
     }
 }
 
+string** two_d_out(int* pn)
+{
+    string** arr = new string * [*pn];
+    for (int i = 0; i < *pn; i++) {
+        arr[i] = new string[10];
+    }
+    return arr;
+}
+
 string** score(int* pn, string** prettyTable)
 {
     string** sc = two_d_out(pn);
