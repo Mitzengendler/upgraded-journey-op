@@ -186,3 +186,20 @@ void sort(int* pn, string* team, int* score)
         }
     }
 }
+
+string** initfinal(int* pn)
+{
+    string** arr = new string* [*pn];
+    for (int i = 0; i < *pn; i++) {
+        arr[i] = new string[2];
+    }
+    return arr;
+}
+
+void fillfinal(int* pn, string* team, int* score, string** out)
+{
+    for (int i = 0; i < *pn; i++) {
+        out[i][0] = team[i];
+        out[i][1] = to_string(score[i]);
+    }
+}

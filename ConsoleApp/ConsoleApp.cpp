@@ -79,4 +79,6 @@ int main()
     for (int j = 0; j < 20; j++) {
         cout << sumsc[j] << " ";
     }
+	string** final = initfinal(pz);
+    fillfinal(pz, tm, sumsc, final);
 }

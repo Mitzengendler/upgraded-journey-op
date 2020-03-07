@@ -22,3 +22,5 @@ int** init2d(int* pn);
 void calcres(int* pn, string** in, int** out);
 void summ(int* pn, int** in, int* out);
 void sort(int* pn, string* team, int* score);
+string** initfinal(int* pn);
+void fillfinal(int* pn, string* team, int* score, string** out);
