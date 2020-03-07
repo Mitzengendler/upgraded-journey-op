@@ -63,6 +63,8 @@ int main()
         }
         cout << endl;
     }
-	string** tm = teams(pn, prettyTable);
-    output(pn, tm);
+    ///////////////////////////////////////////////////////
+	string* tm = teams(pz, prettyTable);
+    output(pz, tm);
+    
 }

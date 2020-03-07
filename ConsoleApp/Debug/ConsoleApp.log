@@ -1,2 +1,7 @@
 ﻿  ConsoleApp.cpp
+  input.cpp
+C:\gitrepo\upgraded-journey-op\ConsoleApp\input.cpp(11,13): warning C4101: num: неиспользованная локальная переменная
+C:\gitrepo\upgraded-journey-op\ConsoleApp\input.cpp(58,27): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+C:\gitrepo\upgraded-journey-op\ConsoleApp\input.cpp(27): warning C4715: read_it: значение возвращается не при всех путях выполнения
   ConsoleApp.vcxproj -> C:\gitrepo\upgraded-journey-op\ConsoleApp\Debug\ConsoleApp.exe

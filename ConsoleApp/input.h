@@ -13,5 +13,6 @@ string* one_d_arr(int* pn);
 void print(int* pn, string* arr);
 string** two_d_eleven(int* pn);
 void pretty(int* pn, string* arr, string** prettyTable);
-string** teams(int* pn, string** prettyTable);
-void output(int* pn, string** tm);
+////////////////////////////////////////////////////
+string* teams(int* pn, string** prettyTable);
+void output(int* pn, string* tm);
