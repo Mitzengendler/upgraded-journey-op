@@ -15,6 +15,7 @@ string** two_d_eleven(int* pn);
 void pretty(int* pn, string* arr, string** prettyTable);
 string* teams(int* pn, string** prettyTable);
 void output(int* pn, string* tm);
+string** two_d_out(int* pn);
 string** score(int* pn, string** prettyTable);
 void showscore(int* pn, string** sc);
 int* init1d(int* pn);
