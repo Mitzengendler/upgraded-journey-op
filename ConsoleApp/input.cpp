@@ -68,3 +68,25 @@ void pretty(int* pn, string* arr, string** prettyTable) {
         }
     }
 }
+
+string** teams(int* pn, string** prettyTable){
+string** tm = new string* [*pn];
+    for (int i = 0; i < *pn; i++) {
+        tm[i] = new string[11];
+        }
+
+    for(int i = 0; i < *pn; i++ ){
+        for(int j = 0; j <= 0; j++){
+            tm[i][j] = prettyTable[i][j];
+        }
+    }
+    return tm;
+}
+
+void output(int* pn, string** tm){
+for(int i = 0; i < *pn; i++ ){
+    for(int j = 0; j <= 0; j++){
+            cout<<setw(3)<< tm[i][j]<<' '<<endl;
+        }
+    }
+}

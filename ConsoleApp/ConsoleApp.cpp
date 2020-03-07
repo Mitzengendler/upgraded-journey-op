@@ -1,4 +1,4 @@
-﻿#include "input.h"
+#include "input.h"
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -63,4 +63,6 @@ int main()
         }
         cout << endl;
     }
+	string** tm = teams(pn, prettyTable);
+    output(pn, tm);
 }
